@@ -8,9 +8,10 @@ public abstract class Conta implements IConta {
     protected double saldo;
     protected Cliente cliente;
 
-    public Conta() {
-        this.agencia = AGENCIA_PADRAO;
+    public Conta(Cliente cliente) {
+        this.agencia = Conta.AGENCIA_PADRAO;
         this.numero = SEQUENCIAL++;
+        this.cliente = cliente;
     }
 
     @Override
